@@ -58,3 +58,7 @@ CREATE TABLE paiment(
   numero_identite VARCHAR(55) NOT NULL,
   FOREIGN KEY (id_paiment_res) REFERENCES reservation (id_reservation)
 );
+
+ALTER TABLE voiture 
+ADD COLUMN nom_voiture VARCHAR(255) NOT NULL,
+ADD COLUMN photo_voiture VARCHAR(255) NOT NULL;
