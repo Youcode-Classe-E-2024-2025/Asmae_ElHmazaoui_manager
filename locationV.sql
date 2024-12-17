@@ -39,3 +39,10 @@ CREATE TABLE Contrat(
   FOREIGN KEY (id_contrat_res) REFERENCES reservation (id_reservation)
 );
 
+CREATE TABLE paiment(
+  id_paiment INT PRIMARY KEY AUTO_INCREMENT,
+  id_paiment_res INT,
+  montant DECIMAL(10,2) NOT NULL,
+  date_paiment DATE NOT NULL,
+  FOREIGN KEY (id_paiment_res) REFERENCES reservation (id_reservation)
+);
