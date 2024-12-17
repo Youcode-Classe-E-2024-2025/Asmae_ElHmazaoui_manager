@@ -21,3 +21,12 @@ CREATE TABLE voiture(
   prix_jour  DECIMAL(10,2) NOT NULL
 );
 
+CREATE TABLE reservation(
+  id_reservation INT PRIMARY KEY AUTO_INCREMENT,
+  id_client INT,
+  id_voiture_res INT,
+  date_debut DATE NOT NULL,
+  date_fin DATE NOT NULL,
+  FOREIGN KEY (id_client) REFERENCES utilisateur (id_user),
+  FOREIGN KEY (id_voiture_res) REFERENCES voiture (id_voiture)
+);
