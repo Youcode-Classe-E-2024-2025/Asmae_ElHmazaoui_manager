@@ -30,3 +30,12 @@ CREATE TABLE reservation(
   FOREIGN KEY (id_client) REFERENCES utilisateur (id_user),
   FOREIGN KEY (id_voiture_res) REFERENCES voiture (id_voiture)
 );
+
+
+CREATE TABLE Contrat(
+  id_contrat INT PRIMARY KEY AUTO_INCREMENT,
+  id_contrat_res INT,
+  date_signature DATE NOT NULL,
+  FOREIGN KEY (id_contrat_res) REFERENCES reservation (id_reservation)
+);
+
