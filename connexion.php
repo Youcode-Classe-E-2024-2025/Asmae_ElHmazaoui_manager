@@ -23,7 +23,7 @@
         </form>
         <!-- Liens pour l'inscription -->
         <div class="link-container">
-            <p>Pas encore de compte ? <a href="signup.html">S'inscrire</a></p>
+            <p>Pas encore de compte ? <a href="inscription.php">S'inscrire</a></p>
         </div>
     </div>
 </body>

@@ -32,7 +32,7 @@
 
         <!-- Liens pour la connexion -->
         <div class="link-container">
-            <p>Vous avez déjà un compte ? <a href="login.html">Connexion</a></p>
+            <p>Vous avez déjà un compte ? <a href="connexion.php">Connexion</a></p>
         </div>
     </div>
 
