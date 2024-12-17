@@ -21,6 +21,7 @@ CREATE TABLE voiture(
   prix_jour  DECIMAL(10,2) NOT NULL
 );
 
+
 CREATE TABLE reservation(
   id_reservation INT PRIMARY KEY AUTO_INCREMENT,
   id_client INT,
@@ -38,14 +39,8 @@ CREATE TABLE Contrat(
   date_signature DATE NOT NULL,
   FOREIGN KEY (id_contrat_res) REFERENCES reservation (id_reservation)
 );
-
-CREATE TABLE paiment(
-  id_paiment INT PRIMARY KEY AUTO_INCREMENT,
-  id_paiment_res INT,
-  montant DECIMAL(10,2) NOT NULL,
-  date_paiment DATE NOT NULL,
-  FOREIGN KEY (id_paiment_res) REFERENCES reservation (id_reservation)
-);
+ 
+--les traces d'une table paiment
 
 -- Supprimer la contrainte de clé étrangère dans la table `paiment`
 ALTER TABLE paiment DROP FOREIGN KEY paiment_ibfk_1;
@@ -55,3 +50,11 @@ DROP TABLE paiment;
 
 --test si la table `paiment` est bien supprimé
 SELECT * FROM paiment;
+
+CREATE TABLE paiment(
+  id_paiment INT PRIMARY KEY AUTO_INCREMENT,
+  id_paiment_res INT,
+  outil_paiment   ENUM('paypal','CH','AttijariwafaBank') NOT NULL,
+  numero_identite VARCHAR(55) NOT NULL,
+  FOREIGN KEY (id_paiment_res) REFERENCES reservation (id_reservation)
+);
