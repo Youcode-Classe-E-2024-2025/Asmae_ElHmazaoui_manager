@@ -46,3 +46,12 @@ CREATE TABLE paiment(
   date_paiment DATE NOT NULL,
   FOREIGN KEY (id_paiment_res) REFERENCES reservation (id_reservation)
 );
+
+-- Supprimer la contrainte de clé étrangère dans la table `paiment`
+ALTER TABLE paiment DROP FOREIGN KEY paiment_ibfk_1;
+
+-- Supprimer la table `paiment`
+DROP TABLE paiment;
+
+--test si la table `paiment` est bien supprimé
+SELECT * FROM paiment;
