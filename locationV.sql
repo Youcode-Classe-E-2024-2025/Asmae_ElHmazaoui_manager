@@ -13,4 +13,11 @@ CREATE TABLE utilisateur(
   role_user ENUM('client','admin') NOT NULL
 );
 
+CREATE TABLE voiture(
+  id_voiture INT PRIMARY KEY AUTO_INCREMENT,
+  modele VARCHAR(50) NOT NULL,
+  marque VARCHAR(50) NOT NULL,
+  couleur VARCHAR(30) NOT NULL,
+  prix_jour  DECIMAL(10,2) NOT NULL
+);
 
