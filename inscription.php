@@ -24,6 +24,14 @@
                 <input type="email"name="email_user" required>
             </div>
             <div>
+                <label>Mot de passe :</label>
+                <input type="password" name="password_user" required>
+            </div>
+            <div>
+                <label>confirmation de mot de passe :</label>
+                <input type="password" name="confirmation_password_user" required>
+            </div>
+            <div>
                 <label>Numéro de téléphone :</label>
                 <input type="tel" name="tel_user" pattern="[0-9]{10}" required>
             </div>
