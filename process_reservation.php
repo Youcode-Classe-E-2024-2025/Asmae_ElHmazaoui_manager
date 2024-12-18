@@ -10,14 +10,14 @@
     <div class="form-container">
         <h2>Réservation</h2>
         <form action="process_reservation.php" method="POST">
-            <label for="date_debut">Date de Début :</label>
+            <label >Date de Début :</label>
             <input type="date" name="date_debut" required><br><br>
 
-            <label for="date_fin">Date de Fin :</label>
+            <label>Date de Fin :</label>
             <input type="date" name="date_fin" required><br><br>
 
             <h3>Contrat</h3>
-            <label for="date_signature">Date de Signature :</label>
+            <label>Date de Signature :</label>
             <input type="date" name="date_signature" required><br><br>
 
             <h3>Paiement</h3>
@@ -39,8 +39,8 @@
                 </div>
             </div><br><br>
 
-            <label for="montant">Numero_identite :</label>
-            <input type="number" step="0.01" name="montant" required><br><br>
+            <label>Numero_identite :</label>
+            <input type="text" step="0.01" name="montant" required><br><br>
 
             <button type="submit">Réserver</button>
         </form>
