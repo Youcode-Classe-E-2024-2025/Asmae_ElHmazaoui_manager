@@ -62,3 +62,8 @@ CREATE TABLE paiment(
 ALTER TABLE voiture 
 ADD COLUMN nom_voiture VARCHAR(255) NOT NULL,
 ADD COLUMN photo_voiture VARCHAR(255) NOT NULL;
+
+
+ALTER TABLE utilisateur
+ADD COLUMN password_user VARCHAR(255) NOT NULL
+AFTER email_user;
