@@ -10,7 +10,7 @@
 
     <div class="form-container">
         <h2>Inscription</h2>
-        <form action="#" method="POST">
+        <form action="manipulation_inscription.php" method="POST">
             <div>
                 <label >Nom :</label>
                 <input type="text"  name="nom_user" required>

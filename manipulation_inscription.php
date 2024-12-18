@@ -1,9 +1,8 @@
 <?php
 
-include 'connexion.php';
+include 'dbConnection.php';
 
-if($_SERVER['REQUSET_METHOD'] == 'POST'){
-    
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // validation pour le nom
     $nom_user  = htmlspecialchars($_POST['nom_user']);
          if(!preg_match("/^[a-zA-Z' ]+$/",$nom_user)){
@@ -47,7 +46,7 @@ if($_SERVER['REQUSET_METHOD'] == 'POST'){
 
     if( $password_user ==  $confirmation_password_user ){
 
-      $sql=$conn->prepare("INSERT INTO utilisateur (nom_user, prenom_user,email_user,password_user,tel_user, role_user) VALUES (?,?,?,?,?,"client")");
+      $sql=$conn->prepare("INSERT INTO utilisateur (nom_user, prenom_user,email_user,password_user,tel_user, role_user) VALUES (?,?,?,?,?,'client')");
       $sql->bind_param("ssss",$nom_user,$prenom_user,$email_user,$password_user,$tel_user);
       
       if($sql->execute()){
