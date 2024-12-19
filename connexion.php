@@ -10,7 +10,7 @@
 <body>
     <div class="form-container">
         <h2>Connexion</h2>
-        <form action="#" method="POST">
+        <form action="manipulation_connexion.php" method="POST">
             <div>
                 <label for="email_user">Email :</label>
                 <input type="email" id="email_user" name="email_user" required>
