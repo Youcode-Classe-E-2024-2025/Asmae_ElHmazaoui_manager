@@ -1,3 +1,5 @@
 <?php
+include 'dbConnection.php';
+
 
 ?>
