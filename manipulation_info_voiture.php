@@ -1,4 +1,5 @@
 <?php
+
 include 'dbConnection.php';
 
 if($_SERVER['REQUEST_METHOD']== 'POST'){
@@ -28,13 +29,13 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 
        // validation du prix de la voiture
        $prix_jour_voiture  = htmlspecialchars($_POST['prix_jour']);
-       if(!filter_var($prix_jour_voiture, FILTER_VALIDATE_FLOAT) && $prix_jour_voiture > 0){
+       if(!filter_var($prix_jour_voiture, FILTER_VALIDATE_FLOAT) || $prix_jour_voiture <= 0){
          $prix_jourVoiture_ERR = "le nom doit contenir seulement les lettres";
        }
 
        // validation de la photo de la voiture
        $photo_voiture = htmlspecialchars($_POST['photo_voiture']);
-       if(filter_var($photo_voiture, FILTER_VALIDATE_URL)){
+       if(!filter_var($photo_voiture, FILTER_VALIDATE_URL)){
          $photo_voiture_ERR = "le nom doit contenir seulement les lettres";
        }
 
@@ -48,7 +49,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
        }else{
         echo "Erreur".$sql->error;
        }
-       
+
     $sql->close();
     $conn->close();
 
