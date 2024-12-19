@@ -1,8 +1,9 @@
 <?php
    include 'dbConnection.php';
 
-   if($_SERVER('REQUEST_METHOD')== 'POST'){
-    
+  
+   if($_SERVER['REQUEST_METHOD']== 'POST'){
+     
       $email=htmlspecialchars($_POST['email_user']);
       $password_user= htmlspecialchars($_POST['password_user']);
 
@@ -11,7 +12,7 @@
      $sql->execute();
      $result= $sql->get_result();
      
-     if($result->nun_row>0){
+     if($result->num_rows>0){
         
         $user_C=$result->fetch_assoc();
 
@@ -19,11 +20,13 @@
            if(password_verify($password_user,$user_C['password_user'])){
             
                 //  redirection selon le role de l'utilisateur 
-                  if($user_C[' role_user'] == 'admin'){
-                    header('Location : tok.php');
+                  if($user_C['role_user'] == 'admin'){
+                    header('Location: tok.php');
+                    exit; 
                   }
                   else{
-                    header('Location : tok3.php');
+                    header('Location: tok3.php'); 
+                    exit; 
                   }
            }else{
             echo"mot de passe incorrecte";
@@ -32,6 +35,7 @@
      }else{
         echo"email non trouvé";
      }
+
  $sql->close();
  $conn->close();
 
