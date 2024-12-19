@@ -38,7 +38,20 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
          $photo_voiture_ERR = "le nom doit contenir seulement les lettres";
        }
 
+       // insertions dans la base de données après la validation 
        
+       $sql=$conn->prepare("INSERT INTO voiture (modele,marque,couleur,prix_jour,nom_voiture,photo_voiture) VALUES (?,?,?,?,?,?)");
+       $sql->bind_param("ssssss",$modele_voiture,$marque_voiture,$couleur_voiture,$prix_jour_voiture,$nom_voiture,$photo_voiture);
+       
+       if($sql->execute()){
+        echo "insertion réussie";
+       }else{
+        echo "Erreur".$sql->error;
+       }
+       
+    $sql->close();
+    $conn->close();
+
 }
 
 ?>
