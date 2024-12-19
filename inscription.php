@@ -23,11 +23,11 @@
                 <label>Email :</label>
                 <input type="email"name="email_user" required>
             </div>
-            <div>
+            <div class="input-container">
                 <label>Mot de passe :</label>
                 <input type="password" name="password_user" required>
             </div>
-            <div>
+            <div class="input-container">
                 <label>confirmation de mot de passe :</label>
                 <input type="password" name="confirmation_password_user" required>
             </div>
