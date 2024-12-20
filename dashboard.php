@@ -102,15 +102,17 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Valeur 1</td>
-                    <td>Valeur 2</td>
-                    <td>Valeur 3</td>
-                    <td>Valeur 4</td>
+                <?php while($data_User= $info_User->fetch_assoc()):?> 
+                    <td><?= $data_User['nom_user']?></td>
+                    <td><?= $data_User['prenom_user']?></td>
+                    <td><?= $data_User['email_user']?></td>
+                    <td><?= $data_User['tel_user']?></td>
                     <td>
                     <i class="fas fa-trash-alt"></i>
                     <i class="fas fa-edit"></i>
                     </td>
                 </tr>
+                <?php endwhile;?>
             </tbody>
         </table>
     </section>
