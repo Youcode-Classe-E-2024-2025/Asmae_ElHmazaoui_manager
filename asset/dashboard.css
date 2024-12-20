@@ -87,3 +87,8 @@ ul li:hover {
 #logoutBtn:hover {
     background-color: #c0392b;
 }
+
+/* Sections */
+.dashboard-section {
+    display: none;
+}
