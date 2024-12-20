@@ -80,8 +80,8 @@
                         <td><?= $dataVoiture['prix_jour'] ?></td>
                         <td><?= $dataVoiture['photo_voiture'] ?></td>
                         <td>
-                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $dataReser['id_reservation']?>'" class="fas fa-trash-alt"></i>
-                        <i onclick="window.location.href='formulaire.php?id=<?= $data['id_form']?>'" class="fas fa-edit"></i>
+                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?=> $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
+                        <i onclick="window.location.href='infoVoiture.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-edit"></i>
                         </td>
                     </tr>
                     <?php endwhile;?> 
@@ -108,7 +108,7 @@
                     <td><?= $data_User['email_user']?></td>
                     <td><?= $data_User['tel_user']?></td>
                     <td>
-                    <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $dataReser['id_reservation']?>'" class="fas fa-trash-alt"></i>
+                    <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $data_User['id_user']?>'" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <?php endwhile;?>
