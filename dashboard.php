@@ -131,16 +131,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Valeur 1</td>
-                        <td>Valeur 2</td>
-                        <td>Valeur 3</td>
-                        <td>Valeur 4</td>
-                        <td>Valeur 4</td>
-                        <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <i class="fas fa-edit"></i>
-                        </td>
+                      <?php while($dataReser = $info_Reser->fetch_assoc()):?>
+                        <?php 
+                        $dataContrat = $info_Contrat->fetch_assoc();
+                        $dataPaiment = $info_Paiment->fetch_assoc();
+                        if( $dataContrat && $dataPaiment): ?>   
+                        <td><?= $dataReser['date_debut']?></td>
+                        <td><?= $dataReser['date_fin']?></td>
+                        <td><?= $dataContrat['date_signature']?></td>
+                        <td><?= $dataPaiment['outil_paiment']?></td>
+                        <td><?= $dataPaiment['numero_identite']?></td>
+                        <?php endif; ?>
                     </tr>
+                    <?php endwhile;?> 
                 </tbody>
             </table>
     </section>
