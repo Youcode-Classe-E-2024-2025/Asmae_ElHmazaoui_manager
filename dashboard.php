@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,15 +13,15 @@
             <h2>Dashboard</h2>
         </div>
         <ul>
-            <li><a href="#voitures">Voitures</a></li>
-            <li><a href="#utilisateurs">Utilisateurs</a></li>
-            <li><a href="#reservations">Réservations</a></li>
-            <li><a href="#logout" id="logoutBtn">Déconnexion</a></li>
+            <li><a href="#" id="voituresLink">Voitures</a></li>
+            <li><a href="#" id="utilisateursLink">Utilisateurs</a></li>
+            <li><a href="#" id="reservationsLink">Réservations</a></li>
+            <li><a href="#" id="logoutBtn">Déconnexion</a></li>
         </ul>
     </div>
 
     <div class="content">
-        <section id="voitures">
+        <section id="voitures" class="dashboard-section">
             <h3>Liste des Voitures</h3>
             <ul>
                 <li>Voiture 1 - Marque 1</li>
@@ -29,7 +30,7 @@
             </ul>
         </section>
 
-        <section id="utilisateurs">
+        <section id="utilisateurs" class="dashboard-section" style="display: none;">
             <h3>Liste des Utilisateurs</h3>
             <ul>
                 <li>Utilisateur 1</li>
@@ -38,7 +39,7 @@
             </ul>
         </section>
 
-        <section id="reservations">
+        <section id="reservations" class="dashboard-section" style="display: none;">
             <h3>Liste des Réservations</h3>
             <ul>
                 <li>Réservation 1 - Voiture 1</li>
@@ -47,7 +48,6 @@
             </ul>
         </section>
     </div>
-
     <script>
     document.addEventListener('DOMContentLoaded', function() {
     // Références aux sections
