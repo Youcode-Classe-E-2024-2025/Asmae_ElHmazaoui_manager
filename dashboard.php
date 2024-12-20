@@ -7,6 +7,19 @@
     <title>Tableau de Bord</title>
     <link rel="stylesheet" href="asset/dashboard.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>  
+    table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }</style>
 </head>
 <body>
     <div class="sidebar">
@@ -33,6 +46,7 @@
                 <th>couleur</th>
                 <th>prix par jour</th>
                 <th>photo </th>
+                <th>Action </th>
             </tr>
         </thead>
         <tbody>
