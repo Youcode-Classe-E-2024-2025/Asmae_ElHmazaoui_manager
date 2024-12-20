@@ -80,7 +80,7 @@
                         <td><?= $dataVoiture['prix_jour'] ?></td>
                         <td><?= $dataVoiture['photo_voiture'] ?></td>
                         <td>
-                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?=> $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
+                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
                         <i onclick="window.location.href='infoVoiture.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-edit"></i>
                         </td>
                     </tr>
