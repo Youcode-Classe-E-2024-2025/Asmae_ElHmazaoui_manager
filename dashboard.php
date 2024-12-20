@@ -48,6 +48,56 @@
         </section>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Références aux sections
+    const voituresSection = document.getElementById('voitures');
+    const utilisateursSection = document.getElementById('utilisateurs');
+    const reservationsSection = document.getElementById('reservations');
+
+    // Références aux liens du menu
+    const voituresLink = document.getElementById('voituresLink');
+    const utilisateursLink = document.getElementById('utilisateursLink');
+    const reservationsLink = document.getElementById('reservationsLink');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    // Fonction pour afficher une section
+    function showSection(sectionToShow) {
+        // Cacher toutes les sections
+        voituresSection.style.display = 'none';
+        utilisateursSection.style.display = 'none';
+        reservationsSection.style.display = 'none';
+        
+        // Afficher la section demandée
+        sectionToShow.style.display = 'block';
+    }
+
+    // Événements pour chaque lien du menu
+    voituresLink.addEventListener('click', function(e) {
+        e.preventDefault();  // Empêche le comportement par défaut du lien
+        showSection(voituresSection);
+    });
+
+    utilisateursLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection(utilisateursSection);
+    });
+
+    reservationsLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection(reservationsSection);
+    });
+
+    // Déconnexion
+    logoutBtn.addEventListener('click', function() {
+        alert('Vous êtes déconnecté!');
+        window.location.href = 'login.html'; // Remplacer par l'URL appropriée
+    });
+
+    // Par défaut, afficher la section des voitures au démarrage
+    showSection(voituresSection);
+});
+
+    </script>
 </body>
 </html>
