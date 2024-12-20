@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Bord</title>
     <link rel="stylesheet" href="asset/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
@@ -23,11 +24,44 @@
     <div class="content">
         <section id="voitures" class="dashboard-section">
             <h3>Liste des Voitures</h3>
-            <ul>
-                <li>Voiture 1 - Marque 1</li>
-                <li>Voiture 2 - Marque 2</li>
-                <li>Voiture 3 - Marque 3</li>
-            </ul>
+            <table>
+        <thead>
+            <tr>
+                <th>Nom voiture</th>
+                <th>modèle</th>
+                <th>marque</th>
+                <th>couleur</th>
+                <th>prix par jour</th>
+                <th>photo </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valeur 1</td>
+                <td>Valeur 2</td>
+                <td>Valeur 3</td>
+                <td>Valeur 4</td>
+                <td>Valeur 5</td>
+                <td>Valeur 6</td>
+                <td>
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-edit"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Valeur A</td>
+                <td>Valeur B</td>
+                <td>Valeur C</td>
+                <td>Valeur D</td>
+                <td>Valeur E</td>
+                <td>Valeur F</td>
+                <td>
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-edit"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
         </section>
 
         <section id="utilisateurs" class="dashboard-section" style="display: none;">
