@@ -22,6 +22,26 @@
         }</style>
 </head>
 <body>
+<?php
+ include 'dbConnection.php';
+
+//  selectioner tout les infos des utilisatuers
+$info_User=$conn->query("SELECT * FROM utilisateur");
+
+//  selectioner tout les infos des voiture
+$info_Voiture=$conn->query("SELECT * FROM  voiture");
+
+//  selectioner tout les infos du tableau reservation
+$info_Reser=$conn->query("SELECT * FROM reservation");
+
+//  selectioner tout les infos du tableau contrat
+$info_Contrat=$conn->query("SELECT * FROM Contrat");
+
+//  selectioner tout les infos du tableau paiment
+$info_Paiment=$conn->query("SELECT * FROM paiment");
+?>
+
+
     <div class="sidebar">
         <div class="logo">
             <h2>Dashboard</h2>
@@ -35,7 +55,7 @@
     </div>
 
     <div class="content">
-        <section id="voitures" class="dashboard-section">
+   <section id="voitures" class="dashboard-section">
             <h3>Liste des Voitures</h3>
     <table>
         <thead>
