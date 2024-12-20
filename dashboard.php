@@ -141,6 +141,10 @@
                         <td><?= $dataContrat['date_signature']?></td>
                         <td><?= $dataPaiment['outil_paiment']?></td>
                         <td><?= $dataPaiment['numero_identite']?></td>
+                        <td>
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-edit"></i>
+                        </td>
                         <?php endif; ?>
                     </tr>
                     <?php endwhile;?> 
