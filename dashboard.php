@@ -37,7 +37,7 @@
     <div class="content">
         <section id="voitures" class="dashboard-section">
             <h3>Liste des Voitures</h3>
-            <table>
+    <table>
         <thead>
             <tr>
                 <th>Nom voiture</th>
@@ -46,7 +46,6 @@
                 <th>couleur</th>
                 <th>prix par jour</th>
                 <th>photo </th>
-                <th>Action </th>
             </tr>
         </thead>
         <tbody>
@@ -62,13 +61,27 @@
                 <i class="fas fa-edit"></i>
                 </td>
             </tr>
+        </tbody>
+    </table>
+        </section>
+
+        <section id="utilisateurs" class="dashboard-section" style="display: none;">
+            <h3>Liste des Utilisateurs</h3>
+    <table>
+        <thead>
             <tr>
-                <td>Valeur A</td>
-                <td>Valeur B</td>
-                <td>Valeur C</td>
-                <td>Valeur D</td>
-                <td>Valeur E</td>
-                <td>Valeur F</td>
+                <th>Nom client</th>
+                <th>Prénom client </th>
+                <th>email client</th>
+                <th>téléphone client</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valeur 1</td>
+                <td>Valeur 2</td>
+                <td>Valeur 3</td>
+                <td>Valeur 4</td>
                 <td>
                 <i class="fas fa-trash-alt"></i>
                 <i class="fas fa-edit"></i>
@@ -78,22 +91,32 @@
     </table>
         </section>
 
-        <section id="utilisateurs" class="dashboard-section" style="display: none;">
-            <h3>Liste des Utilisateurs</h3>
-            <ul>
-                <li>Utilisateur 1</li>
-                <li>Utilisateur 2</li>
-                <li>Utilisateur 3</li>
-            </ul>
-        </section>
-
         <section id="reservations" class="dashboard-section" style="display: none;">
             <h3>Liste des Réservations</h3>
-            <ul>
-                <li>Réservation 1 - Voiture 1</li>
-                <li>Réservation 2 - Voiture 2</li>
-                <li>Réservation 3 - Voiture 3</li>
-            </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Date de Début</th>
+                <th>Date de Fin </th>
+                <th>Date de Signature</th>
+                <th>Paiement</th>
+                <th>Numero_identite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valeur 1</td>
+                <td>Valeur 2</td>
+                <td>Valeur 3</td>
+                <td>Valeur 4</td>
+                <td>Valeur 4</td>
+                <td>
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-edit"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
         </section>
     </div>
     <script>
