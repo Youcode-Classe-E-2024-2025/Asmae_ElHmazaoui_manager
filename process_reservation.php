@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <h2>Réservation</h2>
-        <form action="process_reservation.php" method="POST">
+        <form action="manipulation_process_reservation.php" method="POST">
             <label >Date de Début :</label>
             <input type="date" name="date_debut" required><br><br>
 
