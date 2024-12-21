@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de Bord</title>
-    <link rel="stylesheet" href="asset/dashboard.css">
+    <link rel="stylesheet" href="../asset/dashboard.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>  
            table {
@@ -25,7 +25,7 @@
 <body>
 
 <?php
-        include 'dbConnection.php';
+        include '../model/dbConnection.php';
         
         //  selectioner tout les infos des utilisatuers
         $info_User=$conn->query("SELECT * FROM utilisateur ");
@@ -80,8 +80,8 @@
                         <td><?= $dataVoiture['prix_jour'] ?></td>
                         <td><?= $dataVoiture['photo_voiture'] ?></td>
                         <td>
-                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
-                        <i onclick="window.location.href='infoVoiture.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-edit"></i>
+                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='../controllers/supprimer.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
+                        <i onclick="window.location.href='../view/infoVoiture.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-edit"></i>
                         </td>
                     </tr>
                     <?php endwhile;?> 
@@ -108,7 +108,7 @@
                     <td><?= $data_User['email_user']?></td>
                     <td><?= $data_User['tel_user']?></td>
                     <td>
-                    <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $data_User['id_user']?>'" class="fas fa-trash-alt"></i>
+                    <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='../controllers/supprimer.php?id=<?= $data_User['id_user']?>'" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <?php endwhile;?>
@@ -141,7 +141,7 @@
                         <td><?= $dataPaiment['outil_paiment']?></td>
                         <td><?= $dataPaiment['numero_identite']?></td>
                         <td>
-                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='supprimer.php?id=<?= $dataReser['id_reservation']?>'" class="fas fa-trash-alt"></i>
+                        <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='../controllers/supprimer.php?id=<?= $dataReser['id_reservation']?>'" class="fas fa-trash-alt"></i>
                         </td>
                         <?php endif; ?>
                     </tr>
