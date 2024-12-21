@@ -124,8 +124,8 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="auth-icons">
-        <a href=""><i class="fas fa-user-plus"></i> Inscription</a>
-        <a href="#connexion"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+        <a href="inscription.php"><i class="fas fa-user-plus"></i> Inscription</a>
+        <a href="connexion.php"><i class="fas fa-sign-in-alt"></i> Connexion</a>
     </div>
 </header>
 
