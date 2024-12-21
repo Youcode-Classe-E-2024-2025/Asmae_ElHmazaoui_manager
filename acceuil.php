@@ -24,7 +24,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(49, 49, 49, 0.68);
         position: fixed;
         width: 100%;
         top: 0;
@@ -32,7 +32,8 @@
     }
     
     .logo img {
-        height: 50px;
+        height:30px;
+        width: 50px;
     }
     
     .nav-links {
@@ -51,11 +52,13 @@
     }
     
     .auth-icons {
-        margin-right:35px;
+        margin-right:50px;
     }
 
     .auth-icons a {
         margin-left: 15px;
+        text-decoration: none;
+        color:white;
     }
     
     .auth-icons img {
@@ -97,16 +100,7 @@
     overflow: hidden;
 }
 
-.video-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
 
-/* Désactive l'interaction avec l'iframe (empêche de cliquer sur les contrôles, etc.) */
-.video-iframe {
-    pointer-events: none;
-}
 
 
 </style>
@@ -116,7 +110,7 @@
     <!-- Header avec logo et liens cliquables -->
     <header>
     <div class="logo">
-        <img src="asset/logo.png" alt="Logo">
+        <img src="asset/vidéo/logo.png" alt="Logo">
     </div>
     <div class="nav-links">
         <a href="#about-us">À propos</a>
@@ -124,8 +118,8 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="auth-icons">
-        <a href="view/inscription.php"><i class="fas fa-user-plus"></i> Inscription</a>
-        <a href="view/connexion.php"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+        <a href="view/inscription.php"><i class="fas fa-user-plus"></i></a>
+        <a href="view/connexion.php"><i class="fas fa-sign-in-alt"></i></a>
     </div>
 </header>
 
