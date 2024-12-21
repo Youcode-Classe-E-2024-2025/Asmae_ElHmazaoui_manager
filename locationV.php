@@ -1,5 +1,10 @@
 
+<?php
 
+       include 'dbConnection.php';
+       $sql = "SELECT id, nom_voiture, photo_voiture FROM voiture";
+       $result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
