@@ -1,5 +1,5 @@
 <?php
-   include 'dbConnection.php';
+   include '../model/dbConnection.php';
 
   
    if($_SERVER['REQUEST_METHOD']== 'POST'){
