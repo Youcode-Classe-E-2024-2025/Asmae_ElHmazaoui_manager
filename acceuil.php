@@ -116,7 +116,7 @@
     <!-- Header avec logo et liens cliquables -->
     <header>
     <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="asset/logo.png" alt="Logo">
     </div>
     <div class="nav-links">
         <a href="#about-us">À propos</a>
@@ -130,11 +130,10 @@
 </header>
 
 <div class="video-container">
-    <iframe class="video-iframe"
-        src="https://www.youtube.com/embed/JIVp3erJDMo?autoplay=1&loop=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&playlist=JIVp3erJDMo"
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
+<video autoplay loop muted>
+        <source src="asset/vidéo/introVoiture.mp4" type="video/mp4">
+       
+    </video>
 </div>
 
 
