@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="asset/connexion.css">
+    <link rel="stylesheet" href="../asset/connexion.css">
 </head>
 <body>
     <div class="form-container">
         <h2>Connexion</h2>
-        <form action="manipulation_connexion.php" method="POST">
+        <form action="../controllers/manipulation_connexion.php" method="POST">
             <div>
                 <label for="email_user">Email :</label>
                 <input type="email" id="email_user" name="email_user" required>
@@ -23,7 +23,7 @@
         </form>
         <!-- Liens pour l'inscription -->
         <div class="link-container">
-            <p>Pas encore de compte ? <a href="inscription.php">S'inscrire</a></p>
+            <p>Pas encore de compte ? <a href="../view/inscription.php">S'inscrire</a></p>
         </div>
     </div>
 </body>
