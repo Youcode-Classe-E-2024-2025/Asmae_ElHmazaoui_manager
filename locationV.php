@@ -2,7 +2,7 @@
 <?php
 
        include 'dbConnection.php';
-       $sql = "SELECT id, nom_voiture, photo_voiture FROM voiture";
+       $sql = "SELECT id_voiture, nom_voiture, photo_voiture FROM voiture";
        $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
@@ -66,17 +66,29 @@
 
 <h1>Toutes les Voitures Disponibles</h1>
 <div class="car-container">
-   
-    <div class='car-item'>
-         <img src="" alt="hi">
-         <h3>nom</h3>
-         <form action='louer.php' method='POST'>
-             <input type='hidden' name='id_voiture' value="sfdsf">
-             <button type='submit'>Louer </button>
-         </form>
-    </div>
-   
+    
+   <?php 
+   if($result->num_row >0){
+       while($dataV=$reslut->fecht_assoc()){
+         
+        echo " <div class='car-item'>
+          <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom'] . " '>
+          <h3>". $dataV['nom'] ."</h3>
+          <form action='manipulation_process_reservation.php' method='POST'>
+              <input type='hidden' name='id_voiture' value=' " . $dataV['id_voiture'] ."'>
+              <button type='submit'>Louer </button>
+          </form>
+          </div>
+        ";
 
+       }
+          
+   }else{
+    echo "Aucune voiture disponible.";
+   }
+   $conn->close(); -->
+   
+    ?>
 </div>
 
 </body>
