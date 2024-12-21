@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="asset/inscription.css">
+    <link rel="stylesheet" href="../asset/inscription.css">
 </head>
 <body>
 
     <div class="form-container">
         <h2>Inscription</h2>
-        <form action="manipulation_inscription.php" method="POST">
+        <form action="../controllers/manipulation_inscription.php" method="POST">
             <div>
                 <label >Nom :</label>
                 <input type="text"  name="nom_user" required>
@@ -40,7 +40,7 @@
 
         <!-- Liens pour la connexion -->
         <div class="link-container">
-            <p>Vous avez déjà un compte ? <a href="connexion.php">Connexion</a></p>
+            <p>Vous avez déjà un compte ? <a href="../view/connexion.php">Connexion</a></p>
         </div>
     </div>
 
