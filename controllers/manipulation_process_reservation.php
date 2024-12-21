@@ -1,17 +1,5 @@
 <?php
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root"; // Changez en fonction de votre configuration
-$password = ""; // Changez en fonction de votre configuration
-$dbname = "location_voiture";
-
-// Créer la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include '../model/dbConnection.php';
 
 // Fonction de validation des données
 function validate_date($date) {
