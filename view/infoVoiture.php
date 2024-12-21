@@ -11,7 +11,7 @@
     <div class="form-container">
         <h2>Ajouter une voiture</h2>
 
-        <form action="manipulation_info_voiture.php" method="POST" >
+        <form action="../controllers/manipulation_info_voiture.php" method="POST" >
             <!-- Nom de la voiture -->
             <label >Nom de la voiture :</label>
             <input type="text" name="nom_voiture" required maxlength="255">
