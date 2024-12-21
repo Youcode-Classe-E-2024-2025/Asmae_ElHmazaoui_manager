@@ -68,12 +68,12 @@
 <div class="car-container">
     
    <?php 
-   if($result->num_row >0){
-       while($dataV=$reslut->fecht_assoc()){
+   if($result->num_rows >0){
+       while($dataV=$result->fetch_assoc()){
          
         echo " <div class='car-item'>
-          <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom'] . " '>
-          <h3>". $dataV['nom'] ."</h3>
+          <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom_voiture'] . " '>
+          <h3>". $dataV['nom_voiture'] ."</h3>
           <form action='manipulation_process_reservation.php' method='POST'>
               <input type='hidden' name='id_voiture' value=' " . $dataV['id_voiture'] ."'>
               <button type='submit'>Louer </button>
@@ -86,7 +86,7 @@
    }else{
     echo "Aucune voiture disponible.";
    }
-   $conn->close(); -->
+   $conn->close();
    
     ?>
 </div>
