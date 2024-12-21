@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation</title>
-    <link rel="stylesheet" href="asset/process_reservation.css">
+    <link rel="stylesheet" href="../asset/process_reservation.css">
 </head>
 <body>
     <div class="form-container">
         <h2>Réservation</h2>
-        <form action="manipulation_process_reservation.php" method="POST">
+        <form action="../controllers/manipulation_process_reservation.php" method="POST">
             <label >Date de Début :</label>
             <input type="date" name="date_debut" required><br><br>
 
