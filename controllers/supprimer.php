@@ -1,5 +1,5 @@
 <?php
-include 'dbConnection.php';
+include '../model/dbConnection.php';
 
 $id_USER=$_GET['id'] ?? ''; // récupération de l'id de l'utilisateur 
 $id_VOITURE=$_GET['id'] ?? ''; // récupération de l'id du voiture 
@@ -43,5 +43,5 @@ if($id_VOITURE){
     $del_voiture->close();
 }
 
- header('Location: dashboard.php');
+ header('Location: ../view/dashboard.php');
 ?>
