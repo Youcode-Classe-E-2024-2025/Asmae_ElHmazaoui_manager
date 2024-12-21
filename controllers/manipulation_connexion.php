@@ -21,11 +21,11 @@
             
                 //  redirection selon le role de l'utilisateur 
                   if($user_C['role_user'] == 'admin'){
-                    header('Location: tok.php');
+                    header('Location: ../view/dashboard.php');
                     exit; 
                   }
                   else{
-                    header('Location: tok3.php'); 
+                    header('Location: ../view/locationV.php'); 
                     exit; 
                   }
            }else{
