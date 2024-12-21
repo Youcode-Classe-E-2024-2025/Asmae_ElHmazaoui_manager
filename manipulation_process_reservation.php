@@ -62,8 +62,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Assurez-vous d'avoir l'id du client et du véhicule (ces valeurs doivent être récupérées dynamiquement)
-    $id_client = 1;  // Remplacer par l'ID de l'utilisateur connecté
+    session_start();
+    $id_client = $_SESSION['id_user'];  // ID de l'utilisateur connecté
     $id_voiture_res = 1;  // Remplacer par l'ID de la voiture choisie
+
+    // Vérifier si l'ID du client existe dans la table utilisateur
+    $sql_check_user = "SELECT COUNT(*) FROM utilisateur WHERE id_user = ?";
+    $stmt = $conn->prepare($sql_check_user);
+    $stmt->bind_param("i", $id_client);
+    $stmt->execute();
+    $stmt->bind_result($user_exists);
+    $stmt->fetch();
+
+    if ($user_exists == 0) {
+        echo "Erreur : L'utilisateur avec cet ID n'existe pas.";
+        exit;
+    }
 
     // Début de la transaction
     $conn->begin_transaction();
