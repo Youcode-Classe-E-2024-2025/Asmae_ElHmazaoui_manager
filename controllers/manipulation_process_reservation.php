@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->bind_result($user_exists);
     $stmt->fetch();
+    $stmt->close(); // Toujours fermer les statements
 
     if ($user_exists == 0) {
         echo "Erreur : L'utilisateur avec cet ID n'existe pas.";
@@ -74,6 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->bind_result($voiture_exists);
     $stmt->fetch();
+    $stmt->close(); // Toujours fermer les statements
 
     if ($voiture_exists == 0) {
         echo "Erreur : La voiture avec cet ID n'existe pas.";

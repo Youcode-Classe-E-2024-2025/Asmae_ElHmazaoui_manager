@@ -69,8 +69,6 @@ session_start(); // Démarrer la session
 
             }?>
             <input type="hidden" name="id_voiture" value="<?php echo $_SESSION['id_voiture']; ?>">
-            <input  name="id_voiture" value="<?php echo $_SESSION['id_user']; ?>">
-
             <button type="submit">Réserver</button>
         </form>
     </div>
