@@ -1,37 +1,38 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
 }
 .form-container {
-    background-color: #ffffff;
+    background-color: rgba(59, 59, 59, 0.655);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    margin-left:750px ;
+    margin-top:80px ;
 }
 
 h2 {
     text-align: center;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 20px;
 }
 
 label {
     font-size: 14px;
-    color: #34495e;
+    color: white;
     margin-bottom: 5px;
     display: block;
 }
 input[type="email"], input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 8px 0 20px 0;
     border: 1px solid #ddd;
@@ -45,7 +46,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #10279c;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -62,6 +63,7 @@ button:hover {
 .link-container {
     text-align: center;
     margin-top: 20px;
+    color:white;
 }
 .link-container a {
     color: #3498db;
@@ -78,3 +80,71 @@ button:hover {
     margin-top: -10px;
     margin-bottom: 10px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(49, 49, 49, 0.68);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    }
+    
+    .logo img {
+    height:30px;
+    width: 50px;
+    }
+    
+    .nav-links {
+    display: flex;
+    gap: 20px;
+    }
+    
+    .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    }
+    
+    .nav-links a:hover {
+    text-decoration:none;
+    }
+    .auth-icons {
+    margin-right:50px;
+    }
+    
+    .auth-icons a {
+    margin-left: 15px;
+    text-decoration: none;
+    color:white;
+    }
+    
+    .auth-icons img {
+    width: 30px;
+    height: 30px;
+    }
+    
+.car img{
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    animation: jump 2s ease-in-out infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-80px); /* Saut */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+    
+    
