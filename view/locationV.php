@@ -12,9 +12,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Voitures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color:black;
+        }
+        h3{
+            color:white;
         }
         .car-container {
             display: grid;
@@ -23,28 +28,30 @@
             padding: 20px;
         }
         .car-item {
+            margin-top:70px;
             text-align: center;
             border: 1px solid #ddd;
+            height: 400px;
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(117, 124, 189, 0.98);
         }
         .car-item img {
             width: 100%;
-            height: auto;
+            height: 300px;
             border-radius: 5px;
         }
         .car-item button {
             padding: 10px;
-            background-color: #28a745;
+            background-color:rgb(23, 37, 82);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            width: 80px;
         }
         .car-item button:hover {
-            background-color: #218838;
+            background-color:rgb(29, 79, 110);
         }
         @media (max-width: 1200px) {
             .car-container {
@@ -61,11 +68,68 @@
                 grid-template-columns: 1fr; /* 1 colonne pour les petits écrans (smartphones) */
             }
         }
+        header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: rgba(49, 49, 49, 0.68);
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 100;
+}
+
+.logo img {
+height:30px;
+width: 50px;
+}
+
+.nav-links {
+display: flex;
+gap: 20px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 1.2em;
+}
+
+.nav-links a:hover {
+text-decoration:none;
+}
+.auth-icons {
+margin-right:50px;
+}
+
+.auth-icons a {
+margin-left: 15px;
+text-decoration: none;
+color:white;
+}
+
+.auth-icons img {
+width: 30px;
+height: 30px;
+}
     </style>
 </head>
 <body>
-
-<h1>Toutes les Voitures Disponibles</h1>
+<header>
+    <div class="logo">
+        <img src="../asset/vidéo/logo.png" alt="Logo">
+    </div>
+    <div class="nav-links">
+        <a href="#about-us">Voitures</a>
+        <a href="#services">Location</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="auth-icons">
+        <a href="#"><i class="fas fa-user-plus"></i></a>
+        <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+    </div>
+</header>
 <div class="car-container">
     
    <?php 
