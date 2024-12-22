@@ -128,8 +128,7 @@ $result = $conn->query($sql);
         <a href="#contact">Contact</a>
     </div>
     <div class="auth-icons">
-        <a href="#"><i class="fas fa-user-plus"></i></a>
-        <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+        <a href="#" id="logoutBtn"><i class="fas fa-sign-in-alt"></i></a>
     </div>
 </header>
 <div class="car-container">
@@ -158,6 +157,12 @@ $result = $conn->query($sql);
    
     ?>
 </div>
-
+<script>
+    // Déconnexion
+    logoutBtn.addEventListener('click', function() {
+        alert('Vous êtes déconnecté!');
+        window.location.href = 'deconnexion.php'; // Remplacer par l'URL appropriée
+    });
+</script>
 </body>
 </html>
