@@ -17,6 +17,8 @@
         body {
             font-family: Arial, sans-serif;
             background-color:black;
+            padding: 0;
+            margin: 0;
         }
         h3{
             color:white;
@@ -69,50 +71,50 @@
             }
         }
         header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px;
-background-color: rgba(49, 49, 49, 0.68);
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 100;
-}
-
-.logo img {
-height:30px;
-width: 50px;
-}
-
-.nav-links {
-display: flex;
-gap: 20px;
-}
-
-.nav-links a {
-color: white;
-text-decoration: none;
-font-size: 1.2em;
-}
-
-.nav-links a:hover {
-text-decoration:none;
-}
-.auth-icons {
-margin-right:50px;
-}
-
-.auth-icons a {
-margin-left: 15px;
-text-decoration: none;
-color:white;
-}
-
-.auth-icons img {
-width: 30px;
-height: 30px;
-}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(49, 49, 49, 0.68);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        }
+        
+        .logo img {
+        height:30px;
+        width: 50px;
+        }
+        
+        .nav-links {
+        display: flex;
+        gap: 20px;
+        }
+        
+        .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        }
+        
+        .nav-links a:hover {
+        text-decoration:none;
+        }
+        .auth-icons {
+        margin-right:50px;
+        }
+        
+        .auth-icons a {
+        margin-left: 15px;
+        text-decoration: none;
+        color:white;
+        }
+        
+        .auth-icons img {
+        width: 30px;
+        height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -139,7 +141,7 @@ height: 30px;
         echo " <div class='car-item'>
           <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom_voiture'] . " '>
           <h3>". $dataV['nom_voiture'] ."</h3>
-          <form action='../controllers/manipulation_process_reservation.php' method='POST'>
+          <form action='process_reservation.php' method='POST'>
               <input type='hidden' name='id_voiture' value=' " . $dataV['id_voiture'] ."'>
               <button type='submit'>Louer </button>
           </form>
