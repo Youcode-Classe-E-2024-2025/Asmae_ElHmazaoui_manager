@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <div class="logo">
+    <div class="logo" id="logo">
         <img src="../asset/vidéo/logo.png" alt="Logo">
     </div>
     <div class="nav-links">
@@ -133,6 +133,10 @@
                 event.preventDefault();
             }
         });
+    });
+
+    logo.addEventListener('click', function() {
+        window.location.href = '../acceuil.php'; // Remplacer par l'URL appropriée
     });
 </script>
 
