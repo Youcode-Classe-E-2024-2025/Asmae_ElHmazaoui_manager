@@ -17,36 +17,66 @@
         <a href="#"><i class="fas fa-sign-in-alt"></i></a>
     </div>
 </header>
+<?php
+    include '../model/dbConnection.php';
+     $id_voiture=$_GET['id'] ?? '';
+     $nom_voiture="";
+     $modele="";
+     $marque="";
+     $couleur="";
+     $prix_jour="";
+     $photo_voiture="";
+
+     if($id_voiture){
+      $stmt=$conn->prepare("SELECT * FROM voiture  WHERE id_voiture = ?");
+      $stmt->bind_param("i",$id_voiture);
+      $stmt->execute();
+      $resultat=$stmt->get_result();
+      $data=$resultat->fetch_assoc();
+      if($data){
+        $id_voiture       =$data['id_voiture'];
+        $nom_voiture      =$data['nom_voiture'];
+        $modele           =$data['modele'];
+        $marque           =$data['marque'];
+        $couleur          =$data['couleur'];
+        $prix_jour        =$data['prix_jour'];
+        $photo_voiture    =$data['photo_voiture'];
+      }
+   $stmt->close();
+
+     }
+  ?>
     <div class="form-container">
-        <h2>Ajouter une voiture</h2>
+        <h2><?= $id_voiture? "Modifier Voiture" : "Ajouter une Voiture" ?></h2>
 
         <form action="../controllers/manipulation_info_voiture.php" method="POST" >
+        <input type="hidden" name="id" value="<?php echo $id_voiture; ?>">
             <!-- Nom de la voiture -->
             <label >Nom de la voiture :</label>
-            <input type="text" name="nom_voiture" required maxlength="255">
+            <input type="text" name="nom_voiture" value="<?= $nom_voiture?>" required maxlength="255">
 
             <!-- Modèle de la voiture -->
             <label>Modèle :</label>
-            <input type="text" name="modele" required maxlength="50">
+            <input type="text" name="modele" value="<?= $modele?>" required maxlength="50">
 
             <!-- Marque de la voiture -->
             <label>Marque :</label>
-            <input type="text" name="marque" required maxlength="50">
+            <input type="text" name="marque" value="<?= $marque?>" required maxlength="50">
 
             <!-- Couleur de la voiture -->
             <label>Couleur :</label>
-            <input type="text" name="couleur" required maxlength="30">
+            <input type="text" name="couleur" value="<?= $couleur?>" required maxlength="30">
 
             <!-- Prix par jour -->
             <label>Prix par jour :</label>
-            <input type="number" name="prix_jour" required step="0.01" min="0">
+            <input type="number" name="prix_jour" value="<?= $prix_jour?>" required step="0.01" min="0">
 
             <!-- Photo de la voiture (URL ou chemin) -->
             <label >Photo de la voiture (URL) :</label>
-            <input type="text" name="photo_voiture" required maxlength="255">
+            <input type="text" name="photo_voiture" value="<?= $photo_voiture?>" required maxlength="255">
 
             <!-- Bouton de soumission -->
-            <button type="submit">Ajouter la voiture</button>
+            <button type="submit">enregistrer</button>
         </form>
     </div>
 
