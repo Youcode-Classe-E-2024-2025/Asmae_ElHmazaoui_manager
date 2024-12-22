@@ -28,11 +28,11 @@ Une application web pour la gestion des locations des voitures
 -  Lien vers le repository GitHub contenant :[Repo · Asmae_Elhamzaoui_manager](https://github.com/Youcode-Classe-E-2024-2025/Asmae_ElHmazaoui_manager)
 
 -  Le diagramme ERD :
- ![Structure du projet](ERD.png)
+ ![Structure du projet](../asset/vidéo/ERD.png)
 
 -  Le diagramme du cas d'utilisation :
- ![Structure du projet](USUser.png)
- ![Structure du projet](USAdmin.png)
+ ![Structure du projet](../asset/vidéo/USUser.png)
+ ![Structure du projet](../asset/vidéo/USAdmin.png)
 
 ## Installation
 
@@ -97,7 +97,7 @@ cd Asmae_ElHmazaoui_manager
 - **Style et animations** : Ajoutés avec CSS et JavaScript.
 
 ## Structure du Projet
- ![Structure du projet](structure.png)
+ ![Structure du projet](../asset/vidéo/structure.png)
 ## Outils Utilisés
 
 - **Serveur Web Apache** : Hébergement du projet localement.
