@@ -1,5 +1,6 @@
 <?php
 include '../model/dbConnection.php';
+session_start();
 
 // Fonction de validation des données
 function validate_date($date) {
@@ -8,7 +9,7 @@ function validate_date($date) {
 }
 
 function validate_payment_method($payment_method) {
-    $valid_methods = ['paypal', 'CH', 'AttijariwafaBank'];
+    $valid_methods = ['paypal', 'mastercard', 'visa']; // Correction dans les méthodes de paiement valides
     return in_array($payment_method, $valid_methods);
 }
 
@@ -49,11 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Assurez-vous d'avoir l'id du client et du véhicule (ces valeurs doivent être récupérées dynamiquement)
-    session_start();
-    $id_client = $_SESSION['id_user'];  // ID de l'utilisateur connecté
-    echo" $id_client";
-    $id_voiture_res = $_POST['id_voiture'];  
+    // Assurez-vous d'avoir l'id du client et du véhicule
+    $id_client = $_SESSION['id_user']; // ID de l'utilisateur connecté
+    $id_voiture_res = $_POST['id_voiture'];  // ID de la voiture
 
     // Vérifier si l'ID du client existe dans la table utilisateur
     $sql_check_user = "SELECT COUNT(*) FROM utilisateur WHERE id_user = ?";
@@ -65,6 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user_exists == 0) {
         echo "Erreur : L'utilisateur avec cet ID n'existe pas.";
+        exit;
+    }
+
+    // Vérifier si l'ID du véhicule existe dans la base de données
+    $sql_check_voiture = "SELECT COUNT(*) FROM voiture WHERE id_voiture = ?";
+    $stmt = $conn->prepare($sql_check_voiture);
+    $stmt->bind_param("i", $id_voiture_res);
+    $stmt->execute();
+    $stmt->bind_result($voiture_exists);
+    $stmt->fetch();
+
+    if ($voiture_exists == 0) {
+        echo "Erreur : La voiture avec cet ID n'existe pas.";
         exit;
     }
 

@@ -1,3 +1,7 @@
+<?php
+session_start(); // Démarrer la session
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -57,7 +61,16 @@
 
             <label>Numero_identite :</label>
             <input type="text" step="0.01" name="montant" required><br><br>
-            <input type="hidden" name="id_voiture" value="<?php start_session(); echo $_SESSION['id_voiture']; ?>">
+            <?php 
+            
+             if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                
+                $_SESSION['id_voiture'] = $_POST['id_voituretest'];
+
+            }?>
+            <input type="hidden" name="id_voiture" value="<?php echo $_SESSION['id_voiture']; ?>">
+            <input  name="id_voiture" value="<?php echo $_SESSION['id_user']; ?>">
+
             <button type="submit">Réserver</button>
         </form>
     </div>

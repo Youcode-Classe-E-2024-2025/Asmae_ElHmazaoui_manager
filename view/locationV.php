@@ -1,11 +1,11 @@
 
 <?php
-
-       // Connexion à la base de données
-       include '../model/dbConnection.php';
-       $sql = "SELECT id_voiture, nom_voiture, photo_voiture FROM voiture";
-       $result = $conn->query($sql);
+// Connexion à la base de données
+include '../model/dbConnection.php';
+$sql = "SELECT id_voiture, nom_voiture, photo_voiture FROM voiture";
+$result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -135,6 +135,7 @@
 <div class="car-container">
     
    <?php 
+   session_start(); // Démarrer la session
    if($result->num_rows >0){
        while($dataV=$result->fetch_assoc()){
          
@@ -142,7 +143,7 @@
           <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom_voiture'] . " '>
           <h3>". $dataV['nom_voiture'] ."</h3>
           <form action='process_reservation.php' method='POST'>
-              <input type='hidden' name='id_voiture' value=' " . $dataV['id_voiture'] ."'>
+              <input type='hidden' name='id_voituretest' value=' " . $dataV['id_voiture'] ."'>
               <button type='submit'>Louer </button>
           </form>
           </div>

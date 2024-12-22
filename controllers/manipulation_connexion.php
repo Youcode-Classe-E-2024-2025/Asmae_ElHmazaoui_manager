@@ -26,9 +26,15 @@
                     exit; 
                   }
                   else{
-                    $_SESSION['id_user'] = $id_user; 
-                    header('Location: ../view/locationV.php'); 
-                    exit; 
+                    // Récupérer l'ID de l'utilisateur existant dans la base de données
+                $id_user = $user_C['id_user'];  // Utilisez l'ID utilisateur du résultat de la requête
+
+                // Définir la session avec l'ID de l'utilisateur
+                $_SESSION['id_user'] = $id_user;
+
+                // Redirection vers la page de location
+                header('Location: ../view/locationV.php');
+                exit;
                   }
            }else{
             echo"mot de passe incorrecte";

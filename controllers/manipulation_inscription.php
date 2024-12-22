@@ -57,7 +57,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       
       // execution de la requete sql
       if($sql->execute()){
+        // Récupérer l'ID de l'utilisateur inséré
+        $id_user = $conn->insert_id;  // Récupère l'ID de l'utilisateur inséré
+
+        // Définir la session avec l'ID de l'utilisateur
         $_SESSION['id_user'] = $id_user;
+
+        // Redirection vers la page de location
         header('Location: ../view/locationV.php');
       }else{
         echo "Erreur".$sql->error;
