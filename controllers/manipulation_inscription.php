@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // Connexion à la base de données
 include '../model/dbConnection.php';
 
@@ -57,6 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       
       // execution de la requete sql
       if($sql->execute()){
+        $_SESSION['id_user'] = $id_user;
         header('Location: ../view/locationV.php');
       }else{
         echo "Erreur".$sql->error;

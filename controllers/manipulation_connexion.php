@@ -1,4 +1,5 @@
 <?php
+   session_start();
    include '../model/dbConnection.php';
 
   
@@ -25,6 +26,7 @@
                     exit; 
                   }
                   else{
+                    $_SESSION['id_user'] = $id_user; 
                     header('Location: ../view/locationV.php'); 
                     exit; 
                   }
