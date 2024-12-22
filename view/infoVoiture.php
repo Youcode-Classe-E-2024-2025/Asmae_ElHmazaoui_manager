@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter une voiture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../asset/infoVoiture.css">
 </head>
 <body>
-
+<header>
+    <div class="logo">
+        <img src="../asset/vidéo/logo.png" alt="Logo">
+    </div>
+    <div class="auth-icons">
+        <a href="#"><i class="fas fa-user-plus"></i></a>
+        <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+    </div>
+</header>
     <div class="form-container">
         <h2>Ajouter une voiture</h2>
 
