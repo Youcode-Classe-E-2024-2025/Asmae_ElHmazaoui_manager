@@ -1,7 +1,8 @@
 
 <?php
 
-       include 'dbConnection.php';
+       // Connexion à la base de données
+       include '../model/dbConnection.php';
        $sql = "SELECT id_voiture, nom_voiture, photo_voiture FROM voiture";
        $result = $conn->query($sql);
 ?>
@@ -74,7 +75,7 @@
         echo " <div class='car-item'>
           <img src='" . $dataV['photo_voiture'] . "' alt= '" . $dataV['nom_voiture'] . " '>
           <h3>". $dataV['nom_voiture'] ."</h3>
-          <form action='manipulation_process_reservation.php' method='POST'>
+          <form action='../controllers/manipulation_process_reservation.php' method='POST'>
               <input type='hidden' name='id_voiture' value=' " . $dataV['id_voiture'] ."'>
               <button type='submit'>Louer </button>
           </form>

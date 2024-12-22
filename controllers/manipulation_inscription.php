@@ -49,25 +49,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-<!-- 
-// Traitement du formulaire
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupération des données du formulaire
-    $nom = mysqli_real_escape_string($conn, $_POST['nom_user']);
-    $prenom = mysqli_real_escape_string($conn, $_POST['prenom_user']);
-    $email = mysqli_real_escape_string($conn, $_POST['email_user']);
-    $message = mysqli_real_escape_string($conn, $_POST['message_user']); // Si tu as un champ message
-
-    // Insertion des données dans la base de données
-    $sql = "INSERT INTO utilisateurs (nom, prenom, email, message) 
-            VALUES ('$nom', '$prenom', '$email', '$message')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Les données ont été insérées avec succès !";
-    } else {
-        echo "Erreur: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-// Fermer la connexion
-$conn->close(); --> 
