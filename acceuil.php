@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-        /* Style général */
+    /* Style général */
     body, html {
         margin: 0;
         padding: 0;
@@ -81,7 +81,19 @@
         width: 100%;
         height: 100%;
     }
-    
+
+    .video-text {
+        position: absolute;
+        top: 50%;
+        left: 10px; /* Placer le texte à gauche */
+        transform: translateY(-50%); /* Centrer verticalement */
+        font-size: 6em; /* Agrandir le texte */
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.51); /* Couleur noire transparente */
+        margin-left:40px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour plus de lisibilité */
+    }
+
     /* Footer */
     footer {
         text-align: center;
@@ -92,16 +104,6 @@
         bottom: 0;
         width: 100%;
     }
- 
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-
-
 
 </style>
 
@@ -109,33 +111,26 @@
 <body>
     <!-- Header avec logo et liens cliquables -->
     <header>
-    <div class="logo">
-        <img src="asset/vidéo/logo.png" alt="Logo">
+        <div class="logo">
+            <img src="asset/vidéo/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about-us">À propos</a>
+            <a href="#services">Nos Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="auth-icons">
+            <a href="view/inscription.php"><i class="fas fa-user-plus"></i></a>
+            <a href="view/connexion.php"><i class="fas fa-sign-in-alt"></i></a>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="asset/vidéo/introVoiture.mp4" type="video/mp4">
+        </video>
+        <div class="video-text">Fast GH</div>
     </div>
-    <div class="nav-links">
-        <a href="#about-us">À propos</a>
-        <a href="#services">Nos Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="auth-icons">
-        <a href="view/inscription.php"><i class="fas fa-user-plus"></i></a>
-        <a href="view/connexion.php"><i class="fas fa-sign-in-alt"></i></a>
-    </div>
-</header>
-
-<div class="video-container">
-<video autoplay loop muted>
-        <source src="asset/vidéo/introVoiture.mp4" type="video/mp4">
-       
-    </video>
-</div>
-
-
-
-
-
-
-    
 
     <!-- Footer -->
     <footer>
