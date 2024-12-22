@@ -19,8 +19,8 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="auth-icons">
-        <a href="#"><i class="fas fa-user-plus"></i></a>
-        <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+        <a href="inscription.php"><i class="fas fa-user-plus"></i></a>
+        <a href="connexion.php"><i class="fas fa-sign-in-alt"></i></a>
     </div>
 </header>
 <!-- Image à droite -->
