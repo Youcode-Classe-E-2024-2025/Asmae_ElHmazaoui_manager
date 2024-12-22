@@ -1,93 +1,168 @@
+     /* Mise en forme générale */
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              height: 100vh;
+              background-color: #000000;
+          }
+          
+          /* Conteneur principal du formulaire */
+          .form-container {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              background-color: rgba(59, 59, 59, 0.655);
+              padding: 5px;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              width: 42%;
+              height: 90%;
+              max-width: 1000px;
+              margin-left: 80px;
+              margin-top:130px;
+          }
+          
+          
+          /* Conteneur du formulaire */
+          form {
+              width: 100%;
+              max-width: 500px;
+              margin-left: 20px;
+             
+          }
+          form h2{
+           text-align:center;
+           color:white;
+          }
+          
+          /* Style des champs de texte */
+          input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
+              width: 100%;
+              padding: 10px;
+              margin: 8px 0;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              box-sizing: border-box;
+          }
+          
+          input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+              border-color: #007BFF;
+              outline: none;
+          }
+          
+          /* Container pour les champs nom et prénom */
+          .name-container {
+              display: flex;
+              justify-content: space-between;
+              gap: 10px;
+          }
+          
+          /* Style des labels */
+          label {
+              font-size: 14px;
+              font-weight: bold;
+              color: #ffffff;
+          }
+          
+          /* Style du bouton */
+          button {
+              background-color: #ff6200;
+              color: white;
+              border: none;
+              padding: 12px 20px;
+              border-radius: 4px;
+              cursor: pointer;
+              width: 100%;
+              font-size: 16px;
+              transition: background-color 0.3s;
+          }
+          
+          button:hover {
+              background-color: #ff6200;
+          }
+          
+          /* Style du lien pour la connexion */
+          .link-container {
+              margin-top: 20px;
+              text-align: center;
+              color:white;
+          }
+          
+          .link-container a {
+              color: #ff6200;
+              text-decoration: none;
+          }
+          
+          .link-container a:hover {
+              text-decoration: underline;
+          }
+    
 
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.car img{
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    animation: jump 2s ease-in-out infinite;
 }
 
-
-.form-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-80px); /* Saut */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-
-h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 20px;
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: rgba(49, 49, 49, 0.68);
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 100;
 }
 
-
-label {
-    font-size: 14px;
-    color: #34495e;
-    margin-bottom: 5px;
-    display: block;
+.logo img {
+height:30px;
+width: 50px;
 }
 
-input[type="text"], input[type="email"], input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
+.nav-links {
+display: flex;
+gap: 20px;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
-    border-color: #3498db;
-    outline: none;
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 1.2em;
 }
 
-/* Bouton de soumission */
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.nav-links a:hover {
+text-decoration:none;
+}
+.auth-icons {
+margin-right:50px;
 }
 
-button:hover {
-    background-color: #2980b9;
+.auth-icons a {
+margin-left: 15px;
+text-decoration: none;
+color:white;
 }
 
-/* Styles des liens */
-.link-container {
-    text-align: center;
-    margin-top: 20px;
+.auth-icons img {
+width: 30px;
+height: 30px;
 }
 
-.link-container a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.link-container a:hover {
-    text-decoration: underline;
-}
-
-/* Styles des messages d'erreur */
-.error {
-    color: red;
-    font-size: 12px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
