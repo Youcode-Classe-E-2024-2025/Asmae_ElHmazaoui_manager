@@ -24,8 +24,8 @@
 </header>
 
     <div class="form-container">
-        
-        <form action="../controllers/manipulation_inscription.php" method="POST">
+        <!-- action="../controllers/manipulation_inscription.php" -->
+        <form  method="POST">
         <h2>Inscription</h2>
            <div class="name-container">
               <div>
@@ -68,7 +68,75 @@
        <div class="car">
             <img src="../asset/vidéo/voitureI.png" alt="Image d'illustration">
         </div> 
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            let valid = true;
 
-     
+            // Récupération des champs du formulaire
+            const nom = document.querySelector('input[name="nom_user"]');
+            const prenom = document.querySelector('input[name="prenom_user"]');
+            const tel = document.querySelector('input[name="tel_user"]');
+            const email = document.querySelector('input[name="email_user"]');
+            const password = document.querySelector('input[name="password_user"]');
+            const confirmPassword = document.querySelector('input[name="confirmation_password_user"]');
+            
+            // Validation du nom (lettres et espace seulement, max 30 caractères)
+            const nomPattern = /^[A-Za-zàâäéèêëîïôöùûüç\s]+$/;
+            if (nom.value.trim() === "") {
+                alert("Le champ 'Nom' est obligatoire.");
+                valid = false;
+            } else if (!nomPattern.test(nom.value) || nom.value.length > 30) {
+                alert("Le 'Nom' doit contenir uniquement des lettres et ne pas dépasser 30 caractères.");
+                valid = false;
+            }
+
+            // Validation du prénom (lettres et espace seulement, max 30 caractères)
+            const prenomPattern = /^[A-Za-zàâäéèêëîïôöùûüç\s]+$/;
+            if (prenom.value.trim() === "") {
+                alert("Le champ 'Prénom' est obligatoire.");
+                valid = false;
+            } else if (!prenomPattern.test(prenom.value) || prenom.value.length > 30) {
+                alert("Le 'Prénom' doit contenir uniquement des lettres et ne pas dépasser 30 caractères.");
+                valid = false;
+            }
+
+            // Validation du numéro de téléphone
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(tel.value)) {
+                alert("Veuillez entrer un numéro de téléphone valide (10 chiffres).");
+                valid = false;
+            }
+
+            // Validation de l'email
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email.value)) {
+                alert("Veuillez entrer un email valide.");
+                valid = false;
+            }
+
+            // Validation du mot de passe : au moins 8 caractères, incluant lettres, chiffres et caractères spéciaux
+            const passwordPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (!passwordPattern.test(password.value)) {
+                alert("Le mot de passe doit contenir au moins 8 caractères, dont des lettres, des chiffres et des caractères spéciaux.");
+                valid = false;
+            }
+
+            // Validation de la confirmation du mot de passe
+            if (confirmPassword.value !== password.value) {
+                alert("Les mots de passe ne correspondent pas.");
+                valid = false;
+            }
+
+            // Si une des validations échoue, on empêche l'envoi du formulaire
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+
 </body>
 </html>
