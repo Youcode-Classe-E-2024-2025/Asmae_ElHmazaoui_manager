@@ -52,7 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Assurez-vous d'avoir l'id du client et du véhicule (ces valeurs doivent être récupérées dynamiquement)
     session_start();
     $id_client = $_SESSION['id_user'];  // ID de l'utilisateur connecté
-    $id_voiture_res = 1;  // Remplacer par l'ID de la voiture choisie
+    echo" $id_client";
+    $id_voiture_res = $_POST['id_voiture'];  
 
     // Vérifier si l'ID du client existe dans la table utilisateur
     $sql_check_user = "SELECT COUNT(*) FROM utilisateur WHERE id_user = ?";

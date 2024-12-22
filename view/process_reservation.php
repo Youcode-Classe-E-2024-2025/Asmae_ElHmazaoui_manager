@@ -57,7 +57,7 @@
 
             <label>Numero_identite :</label>
             <input type="text" step="0.01" name="montant" required><br><br>
-
+            <input type="hidden" name="id_voiture" value="<?php start_session(); echo $_SESSION['id_voiture']; ?>">
             <button type="submit">Réserver</button>
         </form>
     </div>
