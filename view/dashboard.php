@@ -8,18 +8,7 @@
     <link rel="stylesheet" href="../asset/dashboard.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>  
-           table {
-                   width: 100%;
-                   border-collapse: collapse;
-               }
-               th, td {
-                   border: 1px solid black;
-                   padding: 8px;
-                   text-align: center;
-               }
-               th {
-                   background-color: #f2f2f2;
-               }
+          
     </style>
 </head>
 <body>
@@ -49,16 +38,20 @@
             <h2>Dashboard</h2>
         </div>
         <ul>
-            <li><a href="#" id="voituresLink">Voitures</a></li>
-            <li><a href="#" id="utilisateursLink">Utilisateurs</a></li>
-            <li><a href="#" id="reservationsLink">Réservations</a></li>
-            <li><a href="#" id="logoutBtn">Déconnexion</a></li>
+            <li><a href="#" id="voituresLink"><h4>Voitures</h4></a></li>
+            <li><a href="#" id="utilisateursLink"><h4>Utilisateurs</h4></a></li>
+            <li><a href="#" id="reservationsLink"><h4>Réservations</h4></a></li>
+            <li><a href="#" id="logoutBtn"><h4>Déconnexion</h4></a></li>
         </ul>
 </div>
 
 <div class="content">
     <section id="voitures" class="dashboard-section">
-            <h3>Liste des Voitures</h3>
+        <div class="voiture">
+        <h3>Liste des Voitures</h3>
+        <button onclick="window.location.href='../view/infoVoiture.php'"><h4>Ajouter une voiture</h4></button>
+        </div>
+            
             <table>
                 <thead>
                     <tr>
@@ -66,7 +59,7 @@
                         <th>modèle</th>
                         <th>marque</th>
                         <th>couleur</th>
-                        <th>prix par jour</th>
+                        <th>prix </th>
                         <th>photo </th>
                     </tr>
                 </thead>
@@ -78,7 +71,7 @@
                         <td><?= $dataVoiture['marque'] ?></td>
                         <td><?= $dataVoiture['couleur'] ?></td>
                         <td><?= $dataVoiture['prix_jour'] ?></td>
-                        <td><?= $dataVoiture['photo_voiture'] ?></td>
+                        <td><img src="<?= $dataVoiture['photo_voiture'] ?>"></td>
                         <td>
                         <i onclick="if(confirm('voulez vraiment supprimé ça ?'))window.location.href='../controllers/supprimer.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-trash-alt"></i>
                         <i onclick="window.location.href='../view/infoVoiture.php?id=<?= $dataVoiture['id_voiture']?>'" class="fas fa-edit"></i>
