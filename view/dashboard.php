@@ -187,7 +187,7 @@
     // Déconnexion
     logoutBtn.addEventListener('click', function() {
         alert('Vous êtes déconnecté!');
-        window.location.href = 'login.html'; // Remplacer par l'URL appropriée
+        window.location.href = 'deconnexion.php'; // Remplacer par l'URL appropriée
     });
 
     // Par défaut, afficher la section des voitures au démarrage
