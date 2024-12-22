@@ -24,8 +24,7 @@
 </header>
 
     <div class="form-container">
-        <!-- action="../controllers/manipulation_inscription.php" -->
-        <form  method="POST">
+        <form action="../controllers/manipulation_inscription.php" method="POST">
         <h2>Inscription</h2>
            <div class="name-container">
               <div>
